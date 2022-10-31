@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+    display: flex;
+    align-items:  center;
+    justify-content: center;
+    min-height: 100vh;
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: var(--Very-light-gray);
+}
+
+.main-section {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.orange-card {
+    background-color: var(--Bright-orange);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.blue-card { 
+    background-color: var(--Dark-cyan);
+}
+
+.orange-card, .blue-card , .green-card {
+    padding: 3.2rem 3.5rem;
+}
+
+.green-card {
+    background-color: var(--Very-dark-cyan);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.title {
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+    color: var(--Very-light-gray);
+}
+
+.description {
+    color: var(--Transparent-white);
+    line-height: 25px;
+    margin-top: 40px;
+}
+
+.button {
+    margin: 6.2rem 30px 20px 0;
+}
+
+.orange-button a, .blue-button a, .green-button a {
+    text-decoration: none;
+    background-color: var(--Very-light-gray);
+    border-radius: 30px;
+    padding: 15px 25px;
+}
+
+.orange-button a{
+    color: var(--Bright-orange);
+}
+
+.blue-button a {
+    color: var(--Dark-cyan);
+}
+
+.green-button a {
+    color: var(--Very-dark-cyan);
+}
+
+.orange-button a:hover, .blue-button a:hover, .green-button a:hover {
+    border: 2px solid var(--Very-light-gray);
+    color: var(--Very-light-gray);
+}
+
+.orange-button a:hover {
+    background-color: var(--Bright-orange);
+}
+
+.blue-button a:hover {
+    background-color: var(--Dark-cyan);
+}
+
+.green-button a:hover {
+    background-color: var(--Very-dark-cyan);
+}
+
+
+@media screen and (max-width: 980px) {
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .main-section {
+        max-width: 375px;
+        margin: 0 auto;
+    }
+
+    .orange-card {
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+
+    .green-card {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+    }
+
+    .orange-card, .blue-card , .green-card {
+        padding: 2.2rem 4.5rem;
+    }
+
+    .description {
+        margin-top: 20px;
+    }
+
+    .button {
+        margin-top: 25px;
+    }
+    
+  }
